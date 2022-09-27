@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=l.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Connect</title>
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-</head>
+<?php 
+  session_start();
+  if(isset($_SESSION['unique_id'])){
+    header("location: users.php");
+  }
+?>
+
+<?php include_once "header.php"; ?>
 <body>
     <div class="wrapper">
         <section class="form signup">
             <header>Connect</header>
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="error-txt"></div>
                 <div class="name-details">
                     <div class="field input">
@@ -35,17 +33,17 @@
                 </div>
                 <div class="field image">
                     <label>Select Profile picture</label>
-                    <input type="file" name="profile_picture" accept="image/png, image/jpeg, image/jpg" required>
+                    <input type="file" name="profile_picture" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
                 </div>
                 <div class="field button">
                     <input type="submit" value="Continue">
                 </div>
             </form>
-            <div class="link">Already signed up? <a href="#">Login now</a></div>
+            <div class="link">Already signed up? <a href="login.php">Login now</a></div>
         </section>
     </div>
 
-    <script src="../JavaScript/pass-show-hide.js"></script>
-    <script src="../JavaScript/signup.js"></script>
+    <script src="JavaScript/pass-show-hide.js"></script>
+    <script src="JavaScript/signup.js"></script>
 </body>
 </html>

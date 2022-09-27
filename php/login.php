@@ -1,36 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=l.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Connect</title>
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-</head>
-<body>
-    <div class="wrapper">
-        <section class="form login">
-            <header>Connect</header>
-            <form action="#">
-                <div class="error-txt">This is an error message!</div>
-                <div class="field input">
-                    <label>Email address</label>
-                    <input type="email" name="email" placeholder="Email Address">
-                </div>
-                <div class="field input">
-                    <label>Password</label>
-                    <input type="password" name="password" placeholder="Password">
-                    <i class="fas fa-eye"></i>
-                </div>
-                <div class="field button">
-                    <input type="submit" value="Continue">
-                </div>
-            </form>
-            <div class="link">Not yet signed up? <a href="#">Signup now</a></div>
-        </section>
-    </div>
+<?php
+    session_start();
+    include_once "config.php";
 
-    <script src="../JavaScript/pass-show-hide.js"></script>
-</body>
-</html>
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
+
+    if(!empty($email) && !empty($password)){
+        $sql = mysqli_query($con, "SELECT * FROM users WHERE email = '{$email}' && password = '{$password}'");
+        if(mysqli_num_rows($sql) > 0){
+            $row = mysqli_fetch_assoc($sql);
+            $_SESSION['unique_id'] = $row['unique_id'];
+            echo "success";
+        }
+        else{
+            echo "Invalid login credentials.";
+        }
+    }
+    else{
+        echo "All fields are required!";
+    }
+?>

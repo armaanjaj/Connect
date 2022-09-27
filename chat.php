@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=l.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Connect</title>
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-</head>
+<?php 
+  session_start();
+  include_once "php/config.php";
+  if(!isset($_SESSION['unique_id'])){
+    header("location: login.php");
+  }
+?>
+<?php include_once "header.php"; ?>
 <body>
     <div class="wrapper">
         <section class="chat-area">
