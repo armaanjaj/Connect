@@ -80,5 +80,7 @@
             </div>
         </section>
     </div>
+
+    <script src="./JavaScript/users.js"></script>
 </body>
 </html>
