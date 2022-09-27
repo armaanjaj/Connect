@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=l.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Connect</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 <body>
@@ -13,7 +13,7 @@
         <section class="users">
             <header>
                 <div class="content">
-                    <img src="DP.jpeg" alt="">
+                    <img src="../DP.jpeg" alt="">
                     <div class="details">
                         <span>Armaan</span>
                         <p>Active now</p>
@@ -29,7 +29,7 @@
             <div class="users-list">
                 <a href="#">
                     <div class="content">
-                        <img src="DP.jpeg" alt="">
+                        <img src="../DP.jpeg" alt="">
                         <div class="details">
                             <span>Andrew</span>
                             <p>Start chatting</p>
@@ -39,7 +39,7 @@
                 </a>
                 <a href="#">
                     <div class="content">
-                        <img src="DP.jpeg" alt="">
+                        <img src="../DP.jpeg" alt="">
                         <div class="details">
                             <span>Andrew</span>
                             <p>Start chatting</p>
@@ -49,7 +49,7 @@
                 </a>
                 <a href="#">
                     <div class="content">
-                        <img src="DP.jpeg" alt="">
+                        <img src="../DP.jpeg" alt="">
                         <div class="details">
                             <span>Andrew</span>
                             <p>Start chatting</p>
@@ -59,7 +59,7 @@
                 </a>
                 <a href="#">
                     <div class="content">
-                        <img src="DP.jpeg" alt="">
+                        <img src="../DP.jpeg" alt="">
                         <div class="details">
                             <span>Andrew</span>
                             <p>Start chatting</p>
@@ -69,7 +69,7 @@
                 </a>
                 <a href="#">
                     <div class="content">
-                        <img src="DP.jpeg" alt="">
+                        <img src="../DP.jpeg" alt="">
                         <div class="details">
                             <span>Andrew</span>
                             <p>Start chatting</p>
@@ -81,6 +81,6 @@
         </section>
     </div>
 
-    <script src="./JavaScript/users.js"></script>
+    <script src="../JavaScript/users.js"></script>
 </body>
 </html>
