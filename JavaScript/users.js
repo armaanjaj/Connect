@@ -3,20 +3,29 @@ search_btn = document.querySelector(".users .search button"),
 user_list = document.querySelector(".users .users-list");
 
 search_btn.onclick = ()=>{
-    search_bar.classList.toggle("active");
-    search_bar.focus();
-    search_btn.classList.toggle("active");
     search_bar.value = "";
-}
-
-search_bar.onkeyup = () =>{
-    let search_item = search_bar.value;
-    if(search_item != ""){
-        search_bar.classList.add("active");
+    if(search_bar.classList.contains("active")){
+        // search_bar.classList.toggle("active");
+        // search_btn.classList.toggle("active");
+        search_bar.classList.remove("active");
+        search_btn.classList.remove("active");
+        search_bar.blur();
     }
     else{
-        search_bar.classList.remove("active");
+        search_bar.classList.add("active");
+        search_btn.classList.add("active");
+        search_bar.focus();
     }
+}
+
+search_bar.oninput = () =>{
+    let search_item = search_bar.value;
+    // if(search_item != ""){
+    //     search_bar.classList.add("active");
+    // }
+    // else{
+    //     search_bar.classList.remove("active");
+    // }
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "php/search.php", true);
     xhr.onload = ()=>{
